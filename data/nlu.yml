@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: check_balance
+  examples: |
+    - give the total balance of my account?
+    - what is the overall balance in this account?
+    - the money of my account?
+    - my current account balance?
+    - what is the total money of my current account?
+    - total balance of this account?
+    - total balance of my account number [ccccc](account_number)
+    - what is the total money in my bank account with account number [ddddd](account_number)?
+    - i want to check balance of my bank account number [aaaaa](account_number) 
+    - please check the amount of money i have in my account [bbbbb](account_number)
+
+- intent: check_transaction_history
+  examples: |
+    - give the transaction of my account?
+    - what is the overall transaction history of this account?
+    - the transaction history of my account?
+    - my current transaction history?
+    - what is the total transaction records of my current account?
+    - total transaction records of this account?
+
+
+- intent: inform
+  examples: |
+    - [aaaaa](account_number)
+    - my account number is [bbbbb](account_number)
+    - Account no: [ccccc](account_number)
+    - My account number is [ddddd](account_number)
+    - This is my account number [eeeee](account_number)
+    - [9811111111](phone_number)
+    - my phone number is [9822222222](phone_number)
+    - Phone no: [9833333333](phone_number)
+    - My phone number is [9844444444](phone_number)
+    - Here is my phone number [9855555555](phone_number)

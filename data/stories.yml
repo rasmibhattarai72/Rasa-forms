@@ -1,0 +1,76 @@
+# version: "3.1"
+
+# stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: check_balance
+#   - action: simple_bank_form
+#   - active_loop: simple_bank_form
+#   - slot_was_set:
+#     - requested_slot: account_number
+#   - slot_was_set:
+#     - account_number: aaaaa
+#   - slot_was_set:
+#     - account_number: bbbbb
+#   - slot_was_set:
+#     - requested_slot: phone_number
+#   - slot_was_set:
+#     - phone_number: 9811111111
+#   - slot_was_set:
+#     - phone_number: 9811111111
+#   - slot_was_set:
+#     - requested_slot: phone_number
+#   - slot_was_set:
+#     - phone_number: 9822222222
+#   - slot_was_set:
+#     - phone_number: null
+#   - slot_was_set:
+#     - requested_slot: phone_number
+#   - slot_was_set:
+#     - phone_number: 9833333333
+#   - slot_was_set:
+#     - phone_number: 9844444444
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_get_account_balance
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: User interrupts the form and doesn't want to continue
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: check_balance
+#   - action: simple_bank_form
+#   - active_loop: simple_bank_form

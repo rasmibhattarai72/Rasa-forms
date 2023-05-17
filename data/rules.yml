@@ -1,0 +1,47 @@
+version: "3.1"
+
+rules:
+
+- rule: Activate Check Balance
+  steps:
+  - intent: check_balance
+  - action: simple_bank_form
+  - active_loop: simple_bank_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_get_account_balance
+
+- rule: Activate Get Transaction History
+  steps:
+  - intent: check_transaction_history
+  - action: simple_bank_form
+  - active_loop: simple_bank_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_check_transaction_history
+
+
+# - rule: Activate Check Balance
+#   steps:
+#   - intent: check_balance
+#   - action: simple_bank_form 
+#   - active_loop: simple_bank_form
+
+# - rule: Activate Check Transaction History
+#   steps:
+#   - intent: check_transaction_history
+#   - action: simple_bank_form
+#   - active_loop: simple_bank_form
+
+# - rule: Submit Check Balance And Transaction
+#   condition:
+#   - active_loop: simple_bank_form
+#   steps:
+#   - action: simple_bank_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_get_balance_and_transaction
+  

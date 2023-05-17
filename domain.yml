@@ -1,0 +1,64 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_balance
+  - check_transaction_history
+  - inform
+
+entities:
+  - account_number
+  - phone_number
+
+slots:
+  account_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: account_number
+      conditions:
+        - active_loop: simple_bank_form
+          requested_slot: account_number
+  phone_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: phone_number
+      conditions:
+        - active_loop: simple_bank_form
+          requested_slot: phone_number
+
+forms:
+  simple_bank_form:
+    required_slots:
+      - account_number
+      - phone_number
+
+responses:
+
+  utter_return_details:
+  - text: Your account number is {account_number} and phone number is {phone_number}.
+
+  utter_ask_account_number:
+  - text: What is your account number?
+
+  utter_ask_phone_number:
+  - text: What is your phone number?
+
+
+actions:
+- validate_simple_bank_form
+- action_get_account_balance
+- action_check_transaction_history
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
